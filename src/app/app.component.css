@@ -27,6 +27,7 @@ header {
 .div_big{
     background-color: #6feab6;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -36,7 +37,7 @@ header {
     margin: 5%;
     height: 400px;
     width: 300px;
-    min-width: 100px;
+    min-width: 300px;
 }
 
 .div_title{
@@ -69,5 +70,17 @@ label {
 
 input {
     margin-left: 3%;
-    width: max-content
+    max-width: 80%;
+}
+
+.div_list_films{
+    background-color: #0d253f;
+    color: white;
+    border-radius: 10px;
+    margin: 3%;
+    padding: 3%;
+}
+
+.div_list_films :hover{
+    color: #01b4e4;
 }
