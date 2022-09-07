@@ -38,14 +38,9 @@ export class AppComponent {
   }
 
   public clickedFilm(event: Event, i: number){
-    let output = (<HTMLInputElement>document.getElementById("div_details"));
-    output.innerHTML = `
-      <p>${this.filmArray[i].title}</p>
-      <p>${this.filmArray[i].release_date}</p>
-      <p>${this.filmArray[i].original_language}</p>
-      <p>${this.filmArray[i].overview}</p>
-      <p class="average">${this.filmArray[i].vote_average}</p>
-    `;
-    
+    this.film = this.filmArray[i];
+    let source1 = "https://api.themoviedb.org/3/movie/" + this.film.id + "/images?api_key=" + this.token + "&language=en-US";
+    let source2 = "https://image.tmdb.org/t/p/w500" + this.film.post_path;
+    console.log(this.film);
   }
 }

@@ -25,18 +25,17 @@
     <div class="div_title">
       <span class="span_title">Film details</span>
     </div>
-    <div class="div_details" id="div_details">
-      <!-- <p>title</p>
-      <p>release_date</p>
-      <p>original_language</p>
-      <p>overview</p>
-      <p class="average">0</p>
-      vote_average -->
+    <div class="div_details" id="div_details" *ngIf="film">
+      <!-- <p><img src="https://api.themoviedb.org/3/movie/{{film.id}}/images?api_key={{token}}&language=en-US"/></p> -->
+      <p><img class="img_film" src="https://image.tmdb.org/t/p/w500{{film.poster_path}}"/></p>
+      <p>{{film.title}}</p>
+      <p>{{film.release_date}}</p>
+      <p>{{film.original_language}}</p>
+      <p>{{film.overview}}</p>
+      <p class="average">{{film.vote_average}}</p>
     </div>
   </div>
 </div>
-
-
 
 
 

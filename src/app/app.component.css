@@ -48,7 +48,6 @@ header{
     width: 100%;
     height: 70px;
     display: flex;
-    /* justify-content: center; */
 }
 
 .span_title{
@@ -116,4 +115,9 @@ input{
 .average{
     border-radius: 50%;
     width: min-content;
+}
+
+.img_film{
+    height: 90%;
+    width: 90%;
 }
