@@ -7,6 +7,7 @@
 
 
 <div class="div_big">
+
   <div class="div_container">
     <div class="div_title">
       <span class="span_title">List of films</span>
@@ -14,14 +15,11 @@
     <div class="div_search">
       <label for="Title">Film title: </label>
       <input type="text" id="search" (keyup.enter)="searchFilms($event)" placeholder="Search.." name="Title">
-    </div>
+    </div>    
     <div class="div_list_films" *ngFor="let film of filmArray; index as i">
-      <!-- style="overflow: scroll; height: xyz;" -->
-      <span id="{{ 'span_film_' + (i + 1) }}" (click)="clickedFilm($event)">{{i + 1}} {{film.title}}</span>
+      <span id="{{ 'span_film_' + (i + 1) }}" (click)="clickedFilm($event)">{{i + 1}} {{film.title}}</span> 
     </div>
   </div>
-
-
 
   <div class="div_container">
     <div class="div_title">

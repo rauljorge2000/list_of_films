@@ -1,6 +1,5 @@
 * {
     margin: 0;
-    /* background-color: #6feab6; */
 }
 
 header {
@@ -29,13 +28,14 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 100%;
 }
 
 .div_container{
     background-color: #01b4e4;
     border-radius: 8px;
     margin: 5%;
-    height: 400px;
+    height: auto;
     width: 300px;
     min-width: 300px;
 }
@@ -66,14 +66,21 @@ header {
 
 label {
     margin-left: 3%;
+    background-color: white;
 }
 
 input {
+    background-color: white;
     margin-left: 3%;
     max-width: 80%;
 }
 
 .div_list_films{
+    /* display: flex;
+    overflow:scroll;
+    justify-content: center;
+    align-items: flex-start; */
+
     background-color: #0d253f;
     color: white;
     border-radius: 10px;
@@ -83,4 +90,8 @@ input {
 
 .div_list_films :hover{
     color: #01b4e4;
+}
+
+.div_list_films span {
+    background-color: #0d253f;
 }
