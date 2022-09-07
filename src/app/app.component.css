@@ -1,8 +1,8 @@
-* {
+*{
     margin: 0;
 }
 
-header {
+header{
     background-color: #0d253f;
     color: white;
     height: 70px;
@@ -31,7 +31,7 @@ header {
     width: 100%;
 }
 
-.div_container{
+.div_container_one{
     background-color: #01b4e4;
     border-radius: 8px;
     margin: 5%;
@@ -64,23 +64,18 @@ header {
     padding: 3%;
 }
 
-label {
+label{
     margin-left: 3%;
     background-color: white;
 }
 
-input {
+input{
     background-color: white;
     margin-left: 3%;
     max-width: 80%;
 }
 
 .div_list_films{
-    /* display: flex;
-    overflow:scroll;
-    justify-content: center;
-    align-items: flex-start; */
-
     background-color: #0d253f;
     color: white;
     border-radius: 10px;
@@ -88,10 +83,37 @@ input {
     padding: 3%;
 }
 
-.div_list_films :hover{
+.div_list_films:hover{
     color: #01b4e4;
 }
 
-.div_list_films span {
+.div_list_films span{
     background-color: #0d253f;
+}
+
+.div_container_two{
+    background-color: #01b4e4;
+    border-radius: 8px;
+    margin: 5%;
+    height: min-content;
+    min-height: 150px;
+    width: 300px;
+    min-width: 300px;
+}
+
+.div_details{
+    background-color: #01b4e4;
+    border-radius: 8px;
+}
+.div_details *{
+    background-color: #0d253f;
+    color: white;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 3%;
+}
+
+.average{
+    border-radius: 50%;
+    width: min-content;
 }

@@ -15,6 +15,7 @@ export class AppComponent {
   url_three : string = "&page=1&include_adult=false"
 
   filmArray ?: any;
+  film ?: any;
 
   constructor(){  }
 
@@ -33,12 +34,18 @@ export class AppComponent {
     this.filmArray = [];
     json.forEach((element: any) => {
       this.filmArray?.push(element);
-      console.log(element.title);
     });
-    console.log(this.filmArray);
   }
 
-  public clickedFilm(event: Event){
-    console.log(event.target);
+  public clickedFilm(event: Event, i: number){
+    let output = (<HTMLInputElement>document.getElementById("div_details"));
+    output.innerHTML = `
+      <p>${this.filmArray[i].title}</p>
+      <p>${this.filmArray[i].release_date}</p>
+      <p>${this.filmArray[i].original_language}</p>
+      <p>${this.filmArray[i].overview}</p>
+      <p class="average">${this.filmArray[i].vote_average}</p>
+    `;
+    
   }
 }

@@ -8,7 +8,7 @@
 
 <div class="div_big">
 
-  <div class="div_container">
+  <div class="div_container_one">
     <div class="div_title">
       <span class="span_title">List of films</span>
     </div>
@@ -16,14 +16,22 @@
       <label for="Title">Film title: </label>
       <input type="text" id="search" (keyup.enter)="searchFilms($event)" placeholder="Search.." name="Title">
     </div>    
-    <div class="div_list_films" *ngFor="let film of filmArray; index as i">
-      <span id="{{ 'span_film_' + (i + 1) }}" (click)="clickedFilm($event)">{{i + 1}} {{film.title}}</span> 
+    <div class="div_list_films" *ngFor="let film of filmArray; index as i" (click)="clickedFilm($event, i)">
+      <span>{{i + 1}} {{film.title}}</span> 
     </div>
   </div>
 
-  <div class="div_container">
+  <div class="div_container_two">
     <div class="div_title">
       <span class="span_title">Film details</span>
+    </div>
+    <div class="div_details" id="div_details">
+      <!-- <p>title</p>
+      <p>release_date</p>
+      <p>original_language</p>
+      <p>overview</p>
+      <p class="average">0</p>
+      vote_average -->
     </div>
   </div>
 </div>
